@@ -1,0 +1,158 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/background.jpg'); /* Adding background image globally */
+    background-size: cover;  /* Ensure the image covers the entire screen */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Fix background when scrolling */
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: rgba(255, 87, 34, 0.8); /* Slight transparency for header */
+    position: relative;
+    z-index: 2; /* Ensure header is above background */
+}
+
+header .logo {
+    width: 100px;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    padding: 5rem 1rem;
+    background-color: rgba(255, 87, 34, 0.8); /* Semi-transparent overlay */
+    z-index: 1; /* Ensure content is above background */
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #fff;
+}
+
+.hero .cta-button {
+    background-color: #e91e63;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #d81b60;
+}
+
+/* Feature Section */
+.features {
+    padding: 2rem;
+    text-align: center;
+    background-color: #fff;
+}
+
+.feature-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.feature-item {
+    width: 30%;
+}
+
+.feature-item img {
+    width: 100%;
+    max-width: 100px;
+}
+
+/* Gallery */
+.gallery {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.image-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image-grid img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Contact Form */
+.contact-form {
+    padding: 2rem;
+    background-color: #fff;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e64a19;
+}
+
+/* Adjust hero section for smaller devices */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .feature-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    .image-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
